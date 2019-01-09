@@ -6,14 +6,14 @@
 // This is equivalent to do
 //	echo init | cpio -o -H newc | gzip > initfs.gz
 //
-// The input file must be called'init' and the archive is
+// The input file must be called 'init' and the archive is
 // written to initfs.gz
 //
-// Mkinit ignores the file attributes and sets mode to 555
+// Mkinit ignores the file attributes, sets modes to 0555
 // and owner to root.
 //
 // Note: the result is an initramfs with the file 'init' in the root
-// directory and not the linux kernel default /sbin/init
+// directory instead of the linux kernel default /sbin/init
 package main
 
 import (
